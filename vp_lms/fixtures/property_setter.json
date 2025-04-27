@@ -1,0 +1,18 @@
+[
+ {
+  "default_value": null,
+  "doc_type": "Debit-Credit-Supply-Chain",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "disbursement_amount",
+  "is_system_generated": 1,
+  "modified": "2025-04-21 15:30:20.132589",
+  "module": null,
+  "name": "Debit-Credit-Supply-Chain-disbursement_amount-in_list_view",
+  "property": "in_list_view",
+  "property_type": "Check",
+  "row_name": null,
+  "value": "1"
+ }
+]
