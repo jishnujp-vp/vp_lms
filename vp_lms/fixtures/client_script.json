@@ -2,6 +2,17 @@
  {
   "docstatus": 0,
   "doctype": "Client Script",
+  "dt": "Invoice due 15D",
+  "enabled": 1,
+  "modified": "2025-04-30 07:01:34.364662",
+  "module": null,
+  "name": "Download due dates",
+  "script": "frappe.ui.form.on('Invoice due 15D', {\r\n    refresh: function(frm) {\r\n        frm.add_custom_button('Download Invoices', () => {\r\n            const rows = frm.doc.invoices || []; // Replace with actual fieldname if different\r\n\r\n            if (rows.length === 0) {\r\n                frappe.msgprint(\"No invoices found in the child table.\");\r\n                return;\r\n            }\r\n\r\n            // Prepare CSV header\r\n            let csv = \"LAN,Invoice ID,Due Date,Outstanding Principle,Disbursement Date,Disbursement Amount,Status,DPD,Interest,Charges,Previous Interest,Previous Charges\\n\";\r\n\r\n            // Loop through child table rows\r\n            rows.forEach(row => {\r\n                csv += `${row.lan || ''},${row.invoice_id || ''},${row.due_date || ''},${row.outstanding_principle || ''},${row.disbursement_date || ''},${row.disbursement_amount || ''},${row.status || ''},${row.dpd || ''},${row.interest || ''},${row.charges || ''},${row.previous_interest || ''},${row.previous_charges || ''}\\n`;\r\n            });\r\n\r\n            // Create a downloadable blob\r\n            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });\r\n            const url = URL.createObjectURL(blob);\r\n            const a = document.createElement('a');\r\n            a.href = url;\r\n            a.download = 'invoice_due_15d.csv';\r\n            a.click();\r\n            URL.revokeObjectURL(url);\r\n        });\r\n    }\r\n});\r\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
   "dt": "Loan file",
   "enabled": 1,
   "modified": "2025-04-09 14:44:12.393919",

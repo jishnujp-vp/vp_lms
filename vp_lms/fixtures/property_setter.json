@@ -1,6 +1,22 @@
 [
  {
   "default_value": null,
+  "doc_type": "Supply Chain account opening",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "max_dpd",
+  "is_system_generated": 1,
+  "modified": "2025-04-29 13:09:12.684764",
+  "module": null,
+  "name": "Supply Chain account opening-max_dpd-in_list_view",
+  "property": "in_list_view",
+  "property_type": "Check",
+  "row_name": null,
+  "value": "1"
+ },
+ {
+  "default_value": null,
   "doc_type": "Debit-Credit-Supply-Chain",
   "docstatus": 0,
   "doctype": "Property Setter",

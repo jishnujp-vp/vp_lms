@@ -4,8 +4,10 @@ app_publisher = "Nitya Sagar and Jishnu Jayaprakash"
 app_description = "Loan Management System, by ValuePitch"
 app_email = "jishnu.jjp97@gmail.com"
 app_license = "bsl-1.0"
+
 fixtures = ["Custom Field", "Property Setter", "Print Format", "Client Script", "Server Script", "Webhook", 
-            {"dt": "DocType", "filters": [["custom", "=", 1]]}
+            {"dt": "DocType", "filters": [["custom", "=", 1]]},
+            "Workspace"
             ]
 
 # required_apps = []
